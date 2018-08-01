@@ -11,6 +11,7 @@ RUN apk update \
 && pip3 install invoke \
 && pip3 install requests \
 && pip3 install doit \
+&& apk add nodejs \
 && rm -r /usr/lib/python*/ensurepip && \
 if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi && \
 if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3 /usr/bin/python; fi && \
